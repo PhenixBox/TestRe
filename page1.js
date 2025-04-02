@@ -1,5 +1,5 @@
-document.getElementById('personalForm').addEventListener('submit', function(event) {
-    event.preventDefault();  // Empêche la soumission du formulaire
+document.getElementById('personalForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Empêche la soumission normale du formulaire
 
     const nom = document.getElementById('nom').value;
     const prenom = document.getElementById('prenom').value;
@@ -7,7 +7,7 @@ document.getElementById('personalForm').addEventListener('submit', function(even
     const email = document.getElementById('email').value;
     const storageChoice = document.querySelector('input[name="storageChoice"]:checked').value;
 
-    // Sauvegarder les données dans sessionStorage pour la page 2
+    // Enregistrer dans sessionStorage pour passer à la page 2
     sessionStorage.setItem('nom', nom);
     sessionStorage.setItem('prenom', prenom);
     sessionStorage.setItem('telephone', telephone);
@@ -15,5 +15,5 @@ document.getElementById('personalForm').addEventListener('submit', function(even
     sessionStorage.setItem('storageChoice', storageChoice);
 
     // Rediriger vers la page 2
-    window.location.href = 'page2.html';
+    window.location.href = "page2.html";
 });
